@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <stl:include file="@/include/meta.html"></stl:include>
+</head>
+
+<body>
+    <stl:include file="@/include/header.html"></stl:include>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <stl:include file="@/include/loc.html"></stl:include>
+            <div class="uk-grid-small" data-uk-grid>
+                <div class="uk-width-auto uk-text-primary"> <span class="uk-margin-xsmall-top" data-uk-icon="icon: {channel.Keywords}; ratio: 2.6"></span> </div>
+                <div class="uk-width-expand">
+                    <h1 class="uk-article-title uk-margin-remove">{channel.Title}</h1>
+                    <p class="uk-text-lead uk-text-muted uk-margin-small-top">{channel.description}</p>
+                </div>
+            </div>
+            <div class="uk-margin-medium-top">
+                <stl:pagecontents order="random" scope="all" pageNum="7">
+                    <div class="uk-card uk-card-category uk-card-default uk-card-hover uk-card-body uk-inline uk-border-rounded uk-width-1-1"> <a class="uk-position-cover" href="{stl:a}"></a>
+                        <h3 class="uk-card-title uk-margin-remove uk-text-primary"> <span class="uk-label uk-label-warning">{channel.title}</span> &nbsp; <stl:content type="Title" wordNum="36"></stl:content>
+                        </h3>
+                        <p class="uk-margin-small-top">
+                            <stl:content type="content" wordNum="100" isClearTags="true"></stl:content>
+                        </p>
+                        <div class="uk-article-meta uk-flex uk-flex-middle">
+                            <stl:if testType="Author" op="Empty">
+                                <stl:yes> <img class="uk-border-circle uk-avatar-small" src="{Stl.SiteUrl}/images/ps.png" alt="Sara Galen"></stl:yes>
+                                <stl:no> <img class="uk-border-circle uk-avatar-small" src="{Stl.SiteUrl}/images/other.png" alt="Sara Galen"></stl:no>
+                            </stl:if>
+                            <div>
+                                <stl:if testType="Author" op="Empty">
+                                    <stl:yes>Written by Pre-sales Team</stl:yes>
+                                    <stl:no>作者： {content.author} </stl:no>
+                                </stl:if> <br> 添加于：<time class="uk-margin-small-right" datetime="{content.addDate}">
+                                    <stl:content type="addDate" formatString="yyyy年MM月dd日"></stl:content>
+                                </time> 更新于：<time datetime="{content.lastEditDate}">
+                                    <stl:content type="lastEditDate" formatString="yyyy年MM月dd日 HH时mm分ss秒"></stl:content>
+                                </time>
+                            </div>
+                        </div>
+                    </div>
+                </stl:pagecontents>
+            </div>
+            <div class="uk-text-center uk-margin-medium-top jo-page">
+                <stl:pageItems>
+                    <stl:pageItem type="PreviousPage">
+                        <stl:yes> <a class="uk-button uk-button-text" href="{Current.Url}">上一页</a> </stl:yes>
+                        <stl:no><button class="uk-button uk-button-text" disabled>上一页</button> </stl:no>
+                    </stl:pageItem>
+                    <stl:pageItem type="PageNavigation">
+                        <div class="uk-button-group">
+                            <stl:yes> <a class="uk-button uk-button-text" href="{Current.Url}" style="margin-left: 3px;">{Current.Num}</a> </stl:yes>
+                            <stl:no> <button class="uk-button uk-button-text" href="javascript:;" disabled>{Current.Num}</button> </stl:no>
+                        </div>
+                    </stl:pageItem>
+                    <stl:pageItem type="NextPage">
+                        <stl:yes> <a class="uk-button uk-button-text" href="{Current.Url}">下一页</a> </stl:yes>
+                        <stl:no> <button class="uk-button uk-button-text" disabled>下一页</button> </stl:no>
+                    </stl:pageItem>
+                </stl:pageItems>
+            </div>
+            <stl:if type="CountOfContents" op="GreatThan" value="0">
+                <stl:no>
+                    <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background: url({Stl.SiteUrl}/images/section-background.svg) 50% no-repeat,linear-gradient(to left top, #28a5f5, #1e87f0) 0 0 no-repeat;">
+                        <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">暂时还没有内容哦~</h1>
+                    </div>
+                </stl:no>
+            </stl:if>
+        </div>
+    </div>
+    <stl:include file="@/include/nav.html"></stl:include>
+    <stl:include file="@/include/footer.html"></stl:include>
+</body>
+
+</html>

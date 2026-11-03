@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <stl:include file="@/include/meta.html"></stl:include>
+</head>
+
+<body >
+    <stl:include file="@/include/header.html"></stl:include>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container uk-container-large">
+            <stl:channels>
+                <h2 class="uk-h3 uk-heading-bullet uk-margin-medium uk-animation-slide-bottom-small"> {channel.title} </h2>
+                <ul class="uk-child-width-1-5@m uk-grid">
+                    <stl:contents>
+                        <li class="uk-margin-medium-bottom">
+                            <div class="uk-card uk-card-default">
+                                <a class="uk-position-cover" href="{stl:a}" target="_blank"></a>
+                                <div class="uk-card-media-top">
+                                    <stl:image src="{content.imageUrl}" altsrc="/images/noimage.png" class="uk-width-1-1" alt="">
+                                </div>
+                                <div class="uk-card-body uk-padding-small">
+                                    <h3 class="uk-card-title uk-text-center uk-margin-remove">{content.title}</h3>
+                                    <p class="uk-margin-remove uk-text-center">{content.subtitle}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </stl:contents>
+                </ul>
+            </stl:channels>
+        </div>
+    </div>
+    <stl:include file="@/include/nav.html"></stl:include>
+    <stl:include file="@/include/footer.html"></stl:include>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<div class="uk-section uk-section-muted">
+    <div class="uk-container">
+        <h2 class="uk-text-center">没有找到答案 ?</h2>
+        <p class="uk-text-muted uk-text-center uk-text-lead">我们的团队只需要一封电子邮件就可以回答您的问题</p>
+        <div class="uk-margin-medium-top uk-flex-center uk-text-center uk-margin-medium-top uk-grid-small" data-uk-grid>
+            <stl:channels channelName="我们" groupChannel="在职">
+                <div>
+                    <div class="uk-card"> 
+                        <a href="{stl:a}"><img class="uk-avatar uk-border-circle" src="{channel.ImageUrl}" alt="{channel.level}"></a>
+                        <h5 class="uk-margin-remove-bottom uk-margin-small-top" uk-tooltip="title: {Channel.title}-{channel.phone}; pos: bottom"> 
+                            <a href="{stl:a}" class="uk-button uk-button-text">{channel.hiname}</a>
+                            <!--这里控制显示锦旗-->
+                            <!--<stl:if type="ChannelName" value="赵彦兵">
+                                <stl:no>
+                                    <div class="years-box no">
+                                        <div class="years-text">
+                                            <stl:contents channelName="2021年">
+                                                <a href="javascript:;" uk-tooltip="title: {content.title};" class="jo-flag">{content.subtitle}</a>
+                                            </stl:contents>
+                                        </div>
+                                    </div>
+                                </stl:no>
+                                <stl:yes>
+                                    <div class="years-box no">
+                                        <div class="years-text">
+                                            <stl:contents channelName="2021年">
+                                                <a href="javascript:;" uk-tooltip="title: {content.title};" class="jo-flag no-flag">{content.subtitle}</a>
+                                            </stl:contents>
+                                        </div>
+                                    </div>
+                                </stl:yes>
+                            </stl:if>-->
+                        </h5>
+                        <stl:if type="ChannelName" value="赵彦兵">
+                            <stl:no>
+                                <ul class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon jo-mar">
+                                    <stl:contents channelName="技能">
+                                        <li><span class="uk-icon jo-{content.subtitle}" data-uk-icon="icon: check; ratio: 0.8"></span> <span class="uk-text-middle">{content.title}</span></li>
+                                    </stl:contents>
+                                </ul>
+                            </stl:no>
+                            <stl:yes>
+                                <div class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon jo-mar jo-gre uk-text-success"> 有任何产品/售前相关的问题<br /> 亦或其他（非经济、非情感）方面的问题<br />找不到答案了<br /> 可在任何时间找我<br /> 我会竭尽所能<br />尽力帮到你 </div>
+                            </stl:yes>
+                        </stl:if>
+                    </div>
+                </div>
+            </stl:channels>
+        </div>
+        <div class="uk-margin-medium-top uk-text-center" data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true"> <a class="uk-button uk-button-primary uk-border-rounded" href="http://w-runner-club.mikecrm.com/7IAj0Rv" target="_blank">点击这里快速提交个需求</a> </div>
+    </div>
+</div>

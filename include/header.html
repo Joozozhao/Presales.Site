@@ -1,0 +1,62 @@
+<header class="uk-background-primary uk-background-norepeat uk-background-cover uk-background-center-center uk-light" style="background: url({Stl.cdn}/images/section-background.svg) 50% no-repeat,url({Stl.cdn}/images/tiger.svg) 5% no-repeat,linear-gradient(to right, #FF6B6B, #FF6B6B) 0 0 no-repeat;">
+    <nav class="uk-navbar-container">
+        <div class="uk-container uk-container-large">
+            <div data-uk-navbar>
+                <div class="uk-navbar-left"> <a class="uk-navbar-item uk-logo uk-visible@m" href="/">{stl.sitename}</a> </div>
+                <div class="uk-navbar-center uk-hidden@m"> <a class="uk-navbar-item uk-logo" href="/">{stl.sitename}</a> </div>
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav uk-visible@m">
+                        <stl:if testType="channelName" testValue="首页">
+                            <stl:successTemplate>
+                                <li class="uk-active">
+                                    <stl:a channelName="首页"></stl:a>
+                                </li>
+                            </stl:successTemplate>
+                            <stl:failureTemplate>
+                                <li>
+                                    <stl:a channelName="首页"></stl:a>
+                                </li>
+                            </stl:failureTemplate>
+                        </stl:if>
+                        <stl:channels channelName="首页" groupChannel="主导航">
+                            <stl:if Type="UpChannelOrSelf">
+                                <stl:yes>
+                                    <li class="uk-active">
+                                        <stl:a>{Channel.Title}</stl:a>
+                                    </li>
+                                </stl:yes>
+                                <stl:no>
+                                    <li>
+                                        <stl:a>{Channel.Title}</stl:a>
+                                    </li>
+                                </stl:no>
+                            </stl:if>
+                        </stl:channels>
+                        <div class="uk-navbar-item"> <a class="uk-button uk-button-small uk-button-primary-outline" href="{stl.contact}" target="_blank">联系我们</a> </div>
+                    </ul> <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <stl:if testType="templateName" testValue="系统首页模板">
+        <stl:successTemplate>
+            <div class="uk-section uk-position-relative uk-position-z-index" data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+                <div class="uk-container">
+                    <h1 class="uk-text-center uk-margin-remove-top">你想查找哪些问题的答案？</h1>
+                    <div class="hero-search uk-margin-medium-top uk-visible@s">
+                        <form class="uk-search uk-search-default uk-width-1-1" name="search-hero" onsubmit="return false;"> <span data-uk-search-icon="ratio: 1.2"></span> <input id="search-hero" class="uk-search-input uk-form-large uk-border-rounded" type="search" placeholder="输入你的问题" autocomplete="off" data-minchars="1" data-maxitems="30"> </form>
+                    </div>
+                </div>
+            </div>
+        </stl:successTemplate>
+        <stl:failureTemplate>
+            <div class="uk-section uk-section-small uk-section-hero uk-position-relative uk-visible@s" data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+                <div class="uk-container">
+                    <div class="hero-search uk-margin-medium-top">
+                        <form class="uk-search uk-search-default uk-width-1-1" name="search-hero" onsubmit="return false;"> <span data-uk-search-icon="ratio: 1.2"></span> <input id="search-hero" class="uk-search-input uk-form-large uk-border-rounded" type="search" placeholder="在这里输入你的问题关键字" autocomplete="off" data-minchars="1" data-maxitems="30"> </form>
+                    </div>
+                </div>
+            </div>
+        </stl:failureTemplate>
+    </stl:if>
+</header>

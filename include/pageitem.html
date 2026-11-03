@@ -1,0 +1,18 @@
+<div class="uk-text-center uk-margin-medium-top">
+    <stl:pageItems>
+        <stl:pageItem type="PreviousPage">
+            <stl:yes> <a class="uk-button uk-button-default" href="{Current.Url}">上一页</a> </stl:yes>
+            <stl:no><button class="uk-button uk-button-default" disabled>上一页</button> </stl:no>
+        </stl:pageItem>
+        <stl:pageItem type="PageNavigation">
+            <div class="uk-button-group">
+                <stl:yes> <a class="uk-button uk-button-primary" href="{Current.Url}">{Current.Num}</a> </stl:yes>
+                <stl:no> <button class="uk-button uk-button-default" href="javascript:;" disabled>{Current.Num}</button> </stl:no>
+            </div>
+        </stl:pageItem>
+        <stl:pageItem type="NextPage">
+            <stl:yes> <a class="uk-button uk-button-primary" href="{Current.Url}">下一页</a> </stl:yes>
+            <stl:no> <button class="uk-button uk-button-default" disabled>下一页</button> </stl:no>
+        </stl:pageItem>
+    </stl:pageItems>
+</div>

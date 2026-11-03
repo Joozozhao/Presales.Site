@@ -1,0 +1,40 @@
+<footer class="uk-section uk-text-center uk-text-muted" style="background:url({Stl.cdn}/images/t.svg) 75% no-repeat; background-size: 100px 100px;">
+    <div class="uk-container uk-container-small">
+        <div>
+            <ul class="uk-subnav uk-flex-center">
+                <li><a class="uk-button uk-button-text" href="HTTPs://www.51welink.com" target="_black">官网</a></li>
+                <li>
+                    <stl:a class="uk-button uk-button-text" channelName="流程">流程</stl:a>
+                </li>
+                <li><a class="uk-button uk-button-text" href="{Stl.contact}" target="_black">联系我们</a></li>
+                <li><a class="uk-button uk-button-text" href="{Stl.feedback}" target="_black">意见反馈</a></li>
+                <li><a href="#" uk-totop uk-scroll></a></li>
+            </ul>
+            <ul class="uk-subnav uk-flex-center">
+                <li><stl:a class="uk-label uk-label-warning jo-font-fff" target="_black" channelName="时间机器">时间机器</stl:a></li>
+                <li>
+                    <stl:a class="uk-label uk-label-danger jo-font-fff" target="_black" channelName="乐学堂">乐学堂</stl:a>
+                </li>
+                </li>
+                <li>
+                    <stl:a class="uk-label uk-label-success jo-font-fff" target="_black" channelName="网址导航">网址导航</stl:a>
+                </li>
+            </ul>
+        </div>
+        <div class="uk-medium uk-text-small uk-link-muted">{stl.ICP}</div>
+    </div>
+</footer>
+<script src="{stl.cdn}/js/awesomplete.min.js"></script>
+<script type="text/javascript">
+(function() {
+    'use strict';
+    document.addEventListener("DOMContentLoaded", function() {
+        var inputHero = document.getElementById("search-hero");
+        var list = [<stl:contents order="addDateback" channelIndex="首页" scope="all" groupChannel="search"> { label: "{content.title}", value: "{stl:a}" },</stl:contents> { label: "下载 企业资料 产品资料 解决方案 文档模版 等", value: "{stl.SiteUrl}/download.html" }];
+        if (inputHero) {
+            inputHero.addEventListener("awesomplete-selectcomplete", function(e) { window.location.href = e.text.value; }, false);
+            new Awesomplete(inputHero, { autoFirst: true, list: list, replace: function(suggestion) { this.input.value = suggestion.label; } });
+        }
+    });
+}());
+</script>

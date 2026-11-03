@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <stl:include file="@/include/book-meta.html"></stl:include>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <stl:include file="@/include/book-header.html"></stl:include>
+        <!-- Banner -->
+        <section id="banner" class="major">
+            <div class="inner">
+                <header class="major">
+                    <h1>Hi, 这里一共发布了<stl:count type="Contents"></stl:count>个<stl:channel type="Title"></stl:channel>～</h1>
+                </header>
+                <div class="content">
+                    
+                    <ul class="actions">
+                        <li><a href="#one" class="button next scrolly">让我看看～</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Main -->
+        <div id="main">
+            <!-- One -->
+            <section id="one" class="tiles">
+                <stl:contents>
+                    <article>
+                        <span class="image">
+                            <img src="{Content.imageUrl}" alt="{content.title}" />
+                        </span>
+                        <header class="major">
+                            <h3>
+                                <stl:a target="_blank" class="link">
+                                    <stl:content type="title"></stl:content>
+                                </stl:a>
+                            </h3>
+                            <p>
+                                <stl:channel type="title"></stl:channel></br>
+                                Update time:<stl:content type="addDate"></stl:content>
+                            </p>
+                        </header>
+                    </article>
+                </stl:contents>
+               
+            </section>
+        </div>
+        <!-- Contact -->
+        <stl:include file="@/include/book-footer.html"></stl:include>
+    </div>
+</body>
+
+</html>

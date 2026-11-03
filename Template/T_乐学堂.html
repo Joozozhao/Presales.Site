@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <stl:include file="@/include/meta.html"></stl:include>
+</head>
+
+<body>
+    <stl:include file="@/include/header.html"></stl:include>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container uk-position-relative">
+            <ul class="uk-child-width-1-2@s uk-grid">
+                <stl:contents order="adddate">
+                    <li class="uk-margin-medium-bottom">
+                        <div class="uk-card uk-card-default">
+                            <a class="uk-position-cover uk-width-1-1" href="{stl:a}"></a>
+                            <div class="uk-card-badge uk-label">时间：<stl:content type="AddDate" formatString="yyyy年MM月dd日 HH时mm分"></stl:content>
+                            </div>
+                            <div class="uk-card-media-top">
+                               <stl:image src="{content.img}" altSrc="/images/noimage.png">
+                            </div>
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title uk-text-center">《{content.title}》 {content.subtitle}</h3>
+                                <p class="uk-text-meta">
+                                    <stl:content type="summary" lefttext="内容摘要：" wordNum="90"></stl:content>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </stl:contents>
+            </ul>
+            <div class="tm-sidebar-right uk-visible@l" style="display:none">
+                <div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-fixed" style="position: fixed; top: 160px; width: 200px;">
+                    <ul uk-scrollspy-nav="closest: li; scroll: true; offset: 30" class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon">
+                        <span class="uk-button uk-button-secondary uk-width-1-1 uk-text-large uk-padding-small">本栏目主理人</span>
+                        <div class="uk-card uk-card-default uk-card-hover">
+                            <a class="uk-position-cover" href="{stl:a}"></a>
+                            <div class="uk-card-media-top">
+                                <div class="uk-inline-clip uk-transition-toggle" tabindex="0"> <img src="/images/glm.jpg" alt="{channel.title}" class="uk-width-1-1"> <img class="uk-transition-scale-up uk-position-cover" src="/images/glm2.jpg" class="uk-width-1-1"> </div>
+                            </div>
+                        </div>
+                        <span class="uk-button uk-button-secondary uk-width-1-1 uk-margin-small-bottom">人力资源部 国立明
+                        </span>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <stl:include file="@/include/nav.html"></stl:include>
+    <stl:include file="@/include/footer.html"></stl:include>
+</body>
+
+</html>

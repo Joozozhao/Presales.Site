@@ -1,0 +1,50 @@
+.count_num {
+    display: inline-block;
+    background-color: #ccc;
+    color: #000;
+    font-size: 0.4em;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.uk-width-expand sup {
+    font-size: 0.5em;
+    color: red;
+}
+
+.jo-color .uk-text-primary {
+    color: #003333 !important;
+}
+
+.jo-left {
+    text-align: left;
+}
+
+.jo-block span {
+    color: #09f;
+    display: inline-block;
+}
+
+.jo-gre {
+    color: #009966 !important;
+}
+
+.jo-red {
+    color: #CC0033 !important;
+}
+
+.jo-mar {
+    margin-top: 10px !important;
+}
+.jo-index .uk-accordion-content {
+	padding: 0 !important;
+    border: none !important;
+    background-color: none !important;
+}
+.uk-grid-index {
+    margin-left: 0 !important;
+    
+}
+.uk-avatar {
+    width: 160px;
+}

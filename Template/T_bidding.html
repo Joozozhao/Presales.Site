@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <stl:include file="@/include/meta.html"></stl:include>
+</head>
+
+<body>
+    <stl:include file="@/include/header.html"></stl:include>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <stl:include file="@/include/loc.html"></stl:include>
+            <div class="uk-grid-small" data-uk-grid>
+                <div class="uk-width-auto uk-text-primary"> <span class="uk-margin-xsmall-top" data-uk-icon="icon: {channel.Keywords}; ratio: 2.6"></span> </div>
+                <div class="uk-width-expand">
+                    <h1 class="uk-article-title uk-margin-remove">{channel.Title}</h1>
+                    <p class="uk-text-lead uk-text-muted uk-margin-small-top">{channel.description}</p>
+                </div>
+            </div>
+            <div class="uk-margin-medium-top">
+                <div class="uk-child-width-1-2@m uk-grid-match" uk-grid>
+                    <stl:pagecontents order="random" scope="all" pageNum="8">
+                        <div>
+                            <div class="uk-card uk-card-default">
+                                <div class="uk-card-header">
+                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto"> <img class="uk-avatar-small" width="40" height="40" src="{Stl.SiteUrl}/images/question.png" alt="{content.title}"> </div>
+                                        <div class="uk-width-expand">
+                                            <h5 class="uk-card-title uk-margin-remove-bottom">
+                                                <stl:a class="uk-button uk-button-text uk-text-left">
+                                                    <stl:content type="Title"></stl:content>
+                                                </stl:a>
+                                            </h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-body">
+                                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                                        <div class="uk-width-auto"> <img class="uk-avatar-small" width="40" height="40" src="{Stl.SiteUrl}/images/answer.png" alt="{content.title}"> </div>
+                                        <div class="uk-width-expand">
+                                            <p class="uk-text-meta uk-margin-remove-top">
+                                                <stl:content type="content" wordNum="60" isClearTags="true" />
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="uk-card-footer uk-text-right"> <a href="{stl:a}" class="uk-button uk-button-text">Read more</a> </div>
+                            </div>
+                        </div>
+                    </stl:pagecontents>
+                </div>
+                <div class="uk-text-center uk-margin-medium-top jo-page">
+                    <stl:pageItems>
+                        <stl:pageItem type="PreviousPage">
+                            <stl:yes> <a class="uk-button uk-button-text  uk-text-success" href="{Current.Url}">上一页</a> </stl:yes>
+                            <stl:no><button class="uk-button uk-button-text" disabled>上一页</button> </stl:no>
+                        </stl:pageItem>
+                        <stl:pageItem type="PageNavigation">
+                            <div class="uk-button-group">
+                                <stl:yes> <a class="uk-button uk-button-text  uk-text-success" href="{Current.Url}" style="margin-left: 3px;">{Current.Num}</a> </stl:yes>
+                                <stl:no> <button class="uk-button uk-button-text" href="javascript:;" disabled>{Current.Num}</button> </stl:no>
+                            </div>
+                        </stl:pageItem>
+                        <stl:pageItem type="NextPage">
+                            <stl:yes> <a class="uk-button uk-button-text uk-text-success" href="{Current.Url}">下一页</a> </stl:yes>
+                            <stl:no> <button class="uk-button uk-button-text" disabled>下一页</button> </stl:no>
+                        </stl:pageItem>
+                    </stl:pageItems>
+                </div>
+                <stl:if type="CountOfContents" op="GreatThan" value="0">
+                    <stl:no>
+                        <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background: url({Stl.SiteUrl}/images/section-background.svg) 50% no-repeat,linear-gradient(to left top, #28a5f5, #1e87f0) 0 0 no-repeat;">
+                            <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">暂时还没有内容哦~</h1>
+                        </div>
+                    </stl:no>
+                </stl:if>
+            </div>
+        </div>
+    </div>
+    <stl:include file="@/include/nav.html"></stl:include>
+    <stl:include file="@/include/footer.html"></stl:include>
+</body>
+
+</html>

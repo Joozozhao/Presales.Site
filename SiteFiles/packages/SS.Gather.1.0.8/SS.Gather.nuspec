@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>SS.Gather</id>
+    <version>1.0.8</version>
+    <title>SiteServer CMS 采集插件</title>
+    <authors>SiteServer CMS</authors>
+    <owners>SiteServer CMS</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/siteserver/SS.Gather/</projectUrl>
+    <iconUrl>https://storage.sscms.com/plugins/ss.gather/logo.svg</iconUrl>
+    <description>SiteServer CMS 采集插件</description>
+    <copyright>Copyright © SiteServer CMS</copyright>
+    <tags>SiteServer CMS Plugin</tags>
+    <repository url="https://github.com/siteserver/SS.Gather" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="ExcelDataReader.DataSet" version="3.6.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNet.WebApi.Core" version="5.2.7" exclude="Build,Analyzers" />
+        <dependency id="NDesk.Options" version="0.2.1" exclude="Build,Analyzers" />
+        <dependency id="SiteServer.Plugin" version="2.3.15" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.Caching" version="4.5.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.5.2" />
+    </frameworkAssemblies>
+    <contentFiles>
+      <files include="any/net452/assets/css/bootstrap-4.1.0.min.css" buildAction="Content" />
+      <files include="any/net452/assets/css/font-awesome-4.7.0.min.css" buildAction="Content" />
+      <files include="any/net452/assets/css/siteserver-1.0.7.min.css" buildAction="Content" />
+      <files include="any/net452/assets/fonts/fontawesome-webfont.eot" buildAction="Content" />
+      <files include="any/net452/assets/fonts/fontawesome-webfont.svg" buildAction="Content" />
+      <files include="any/net452/assets/fonts/fontawesome-webfont.ttf" buildAction="Content" />
+      <files include="any/net452/assets/fonts/fontawesome-webfont.woff" buildAction="Content" />
+      <files include="any/net452/assets/fonts/fontawesome-webfont.woff2" buildAction="Content" />
+      <files include="any/net452/assets/fonts/FontAwesome.otf" buildAction="Content" />
+      <files include="any/net452/assets/images/failure.svg" buildAction="Content" />
+      <files include="any/net452/assets/images/loading.gif" buildAction="Content" />
+      <files include="any/net452/assets/images/success.svg" buildAction="Content" />
+      <files include="any/net452/assets/js/swal2.js" buildAction="Content" />
+      <files include="any/net452/assets/js/utils.js" buildAction="Content" />
+      <files include="any/net452/assets/js/validate.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/axios-0.18.0.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/es6-promise.auto.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/iframe-resizer/iframeResizer-3.6.3.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/iframe-resizer/iframeResizer.contentWindow-3.6.3.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/jquery-1.9.1.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/js.cookie-2.2.0.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/layer/layer-3.1.1.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/layer/mobile/layer.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/layer/mobile/need/layer.css" buildAction="Content" />
+      <files include="any/net452/assets/lib/layer/theme/default/icon-ext.png" buildAction="Content" />
+      <files include="any/net452/assets/lib/layer/theme/default/icon.png" buildAction="Content" />
+      <files include="any/net452/assets/lib/layer/theme/default/layer.css" buildAction="Content" />
+      <files include="any/net452/assets/lib/layer/theme/default/loading-0.gif" buildAction="Content" />
+      <files include="any/net452/assets/lib/layer/theme/default/loading-1.gif" buildAction="Content" />
+      <files include="any/net452/assets/lib/layer/theme/default/loading-2.gif" buildAction="Content" />
+      <files include="any/net452/assets/lib/lodash-4.17.10.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/md5-2.10.0.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/sweetalert2-7.28.4.all.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/vee-validate/locale/zh_CN-2.2.2.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/vee-validate/vee-validate-2.2.2.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/vue-2.6.10.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/vue-input-tag-1.0.4.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/vue-multiselect/script-2.1.0.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/vue-multiselect/style-2.1.0.min.css" buildAction="Content" />
+      <files include="any/net452/assets/lib/vue-upload-component-2.8.14.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/vue2-datepicker-2.4.3.min.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/web-uploader/js/Q.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/web-uploader/js/Q.md5File.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/web-uploader/js/Q.Uploader.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/web-uploader/js/Q.Uploader.slice.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/web-uploader/js/Q.Uploader.UI.File.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/web-uploader/js/Q.Uploader.UI.Image.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/web-uploader/js/spark-md5.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/web-uploader/Q.Uploader.file.all.js" buildAction="Content" />
+      <files include="any/net452/assets/lib/web-uploader/Q.Uploader.image.all.js" buildAction="Content" />
+      <files include="any/net452/pages/add.html" buildAction="Content" />
+      <files include="any/net452/pages/add.js" buildAction="Content" />
+      <files include="any/net452/pages/rules.html" buildAction="Content" />
+      <files include="any/net452/pages/rules.js" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerChannels.html" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerChannels.js" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerContents.html" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerContents.js" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerCopy.html" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerCopy.js" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerTest.html" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerTest.js" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerTestAttributes.html" buildAction="Content" />
+      <files include="any/net452/pages/rulesLayerTestAttributes.js" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+</package>

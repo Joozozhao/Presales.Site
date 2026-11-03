@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <stl:include file="@/include/meta.html"></stl:include>
+</head>
+
+<body>
+    <stl:include file="@/include/header.html"></stl:include>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <stl:include file="@/include/loc.html"></stl:include>
+            <div class="uk-background-default uk-border-rounded uk-box-shadow-small">
+                <div class="uk-container uk-container-xsmall uk-padding-large">
+                    <article class="uk-article">
+                        <h1 class="uk-article-title">{content.title}</h1>
+                        <div class="uk-margin">关键字：<stl:tags><span class="uk-button uk-button-text uk-button-small">{Tag.name}</span> &nbsp;</stl:tags>
+                        </div>
+                        <div class="uk-article-meta uk-margin uk-flex uk-flex-middle">
+                            <stl:if testType="Author" op="Empty">
+                                <stl:yes> <img class="uk-border-circle uk-avatar-small" src="{Stl.SiteUrl}/images/ps.png" alt="Sara Galen"></stl:yes>
+                                <stl:no> <img class="uk-border-circle uk-avatar-small" src="{Stl.SiteUrl}/images/other.png" alt="Sara Galen"></stl:no>
+                            </stl:if>
+                            <div>
+                                <stl:if testType="Author" op="Empty">
+                                    <stl:yes>Written by Pre-sales Team</stl:yes>
+                                    <stl:no>作者： {content.author} </stl:no>
+                                </stl:if> <br> 添加于：<time class="uk-margin-small-right" datetime="{content.addDate}">
+                                    <stl:content type="addDate" formatString="yyyy年MM月dd日"></stl:content>
+                                </time> 更新于： <time datetime="{content.lastEditDate}">
+                                    <stl:content type="lastEditDate" formatString="yyyy年MM月dd日 HH时mm分ss秒"></stl:content>
+                                </time>
+                            </div>
+                        </div>
+                        <div class="uk-article-content">
+                            <stl:content type="imageurl" class="uk-margin-bottom"></stl:content>
+                            <div class="jo-contents">{content.content}</div>
+                        </div>
+                        <div class="uk-margin-large-top paginate-post">
+                            <div class="uk-child-width-expand@s uk-grid-large" data-uk-grid>
+                                <div>
+                                    <h5>
+                                        <stl:navigation type="PreviousContent">
+                                            <stl:content type="title" wordnum="15"></stl:content>
+                                        </stl:navigation>
+                                    </h5>
+                                    <div>
+                                        <stl:navigation type="PreviousContent">
+                                            <stl:a class="uk-remove-underline hvr-back">&larr; 上一条</stl:a>
+                                        </stl:navigation>
+                                    </div>
+                                </div>
+                                <div class="uk-text-right">
+                                    <h5>
+                                        <stl:navigation type="NextContent">
+                                            <stl:content type="title" wordnum="15"></stl:content>
+                                        </stl:navigation>
+                                    </h5>
+                                    <div>
+                                        <stl:navigation type="NextContent">
+                                            <stl:a class="uk-remove-underline hvr-forward">下一条 &rarr;</stl:a>
+                                        </stl:navigation>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <stl:include file="@/include/nav.html"></stl:include>
+    <stl:include file="@/include/footer.html"></stl:include>
+</body>
+
+</html>

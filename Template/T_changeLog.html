@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <stl:include file="@/include/meta.html"></stl:include>
+</head>
+
+<body>
+    <stl:include file="@/include/header.html"></stl:include>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <stl:include file="@/include/loc.html"></stl:include>
+            <div class="uk-grid-small" data-uk-grid>
+                <div class="uk-width-auto uk-text-primary"> <span class="uk-margin-xsmall-top" data-uk-icon="icon: {channel.Keywords}; ratio: 2.6"></span> </div>
+                <div class="uk-width-expand">
+                    <h1 class="uk-article-title uk-margin-remove">{channel.Title} </h1>
+                    <p class="uk-text-lead uk-text-muted uk-margin-small-top">{channel.description}</p>
+                </div>
+            </div>
+            <div class="uk-card uk-card-body uk-card-default uk-card-hover uk-inline uk-alert-default uk-border-rounded" uk-alert style="background-color: #fff;"> <a class="uk-alert-close" style="color: #000; font-weight: 700;" uk-close> {stl.timestext}仅剩 </a>
+                <div class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: {stl.timesdate}">
+                    <div>
+                        <div class="uk-countdown-number uk-countdown-days"></div>
+                    </div>
+                    <div class="uk-countdown-separator">天</div>
+                    <div>
+                        <div class="uk-countdown-number uk-countdown-hours"></div>
+                    </div>
+                    <div class="uk-countdown-separator">时</div>
+                    <div>
+                        <div class="uk-countdown-number uk-countdown-minutes"></div>
+                    </div>
+                    <div class="uk-countdown-separator">'</div>
+                    <div>
+                        <div class="uk-countdown-number uk-countdown-seconds"></div>
+                    </div>
+                    <div class="uk-countdown-separator">"</div>
+                </div>
+            </div>
+            <div class="uk-background-default uk-border-rounded uk-box-shadow-small">
+                <div class="uk-container uk-padding-large">
+                    <article class="uk-article">
+                        <div class="uk-article-content">
+                            <div class="tm-timeline uk-margin-large-top">
+                                <stl:contents order="addDate">
+                                    <div class="tm-timeline-entry">
+                                        <div class="tm-timeline-time">
+                                            <h5>{content.adddate}</h5>
+                                        </div>
+                                        <div class="tm-timeline-body">
+                                            <h3 class="uk-flex uk-flex-middle">Version {content.title}</h3>
+                                            <ul class="uk-list"> {content.content} </ul>
+                                        </div>
+                                    </div>
+                                </stl:contents>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <stl:include file="@/include/nav.html"></stl:include>
+    <stl:include file="@/include/footer.html"></stl:include>
+</body>
+
+</html>

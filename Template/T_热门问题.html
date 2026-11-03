@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <stl:include file="@/include/meta.html"></stl:include>
+</head>
+
+<body>
+    <stl:include file="@/include/header.html"></stl:include>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <stl:include file="@/include/loc.html"></stl:include>
+            <div class="uk-grid-small" data-uk-grid>
+                <div class="uk-width-auto uk-text-primary"> <span class="uk-margin-xsmall-top" data-uk-icon="icon: {channel.Keywords}; ratio: 2.6"></span> </div>
+                <div class="uk-width-expand">
+                    <h1 class="uk-article-title uk-margin-remove">{channel.Title}</h1>
+                    <p class="uk-text-lead uk-text-muted uk-margin-small-top">{channel.description}</p>
+                </div>
+            </div>
+            <div class="uk-margin-medium-top">
+                <stl:pagecontents pagenum="7" order="addDateback" channelIndex="产品大全" scope="all" isHot="true">
+                    <div class="uk-card uk-card-category uk-card-default uk-card-hover uk-card-body uk-inline uk-border-rounded uk-width-1-1"> <a class="uk-position-cover" href="{stl:a}"></a>
+                        <h3 class="uk-card-title uk-margin-remove uk-text-primary"> <span class="uk-label uk-label-danger">{channel.title}</span> &nbsp; <stl:content type="Title"></stl:content>
+                        </h3>
+                        <p class="uk-margin-small-top">
+                            <stl:content type="content" wordNum="100" isClearTags="true"></stl:content>
+                        </p>
+                        <div class="uk-article-meta uk-flex uk-flex-middle">
+                            <stl:if testType="Author" op="Empty">
+                                <stl:yes> <img class="uk-border-circle uk-avatar-small" src="{Stl.SiteUrl}/images/ps.png" alt="Sara Galen"></stl:yes>
+                                <stl:no> <img class="uk-border-circle uk-avatar-small" src="{Stl.SiteUrl}/images/other.png" alt="Sara Galen"></stl:no>
+                            </stl:if>
+                            <div>
+                                <stl:if testType="Author" op="Empty">
+                                    <stl:yes>Written by Pre-sales Team</stl:yes>
+                                    <stl:no>作者： {content.author} </stl:no>
+                                </stl:if> <br> 添加于：<time class="uk-margin-small-right" datetime="{content.addDate}">
+                                    <stl:content type="addDate" formatString="yyyy年MM月dd日"></stl:content>
+                                </time> 更新于：<time datetime="{content.lastEditDate}">
+                                    <stl:content type="lastEditDate" formatString="yyyy年MM月dd日 HH时mm分ss秒"></stl:content>
+                                </time>
+                            </div>
+                        </div>
+                    </div>
+                </stl:pagecontents>
+            </div>
+            <div class="uk-text-center uk-margin-medium-top jo-page">
+                <stl:pageItems>
+                    <stl:pageItem type="PreviousPage">
+                        <stl:yes> <a class="uk-button uk-button-text" href="{Current.Url}">上一页</a> </stl:yes>
+                        <stl:no><button class="uk-button uk-button-text" disabled>上一页</button> </stl:no>
+                    </stl:pageItem>
+                    <stl:pageItem type="PageNavigation">
+                        <div class="uk-button-group">
+                            <stl:yes> <a class="uk-button uk-button-text" href="{Current.Url}" style="margin-left: 3px;">{Current.Num}</a> </stl:yes>
+                            <stl:no> <button class="uk-button uk-button-text" href="javascript:;" disabled>{Current.Num}</button> </stl:no>
+                        </div>
+                    </stl:pageItem>
+                    <stl:pageItem type="NextPage">
+                        <stl:yes> <a class="uk-button uk-button-text" href="{Current.Url}">下一页</a> </stl:yes>
+                        <stl:no> <button class="uk-button uk-button-text" disabled>下一页</button> </stl:no>
+                    </stl:pageItem>
+                </stl:pageItems>
+            </div>
+        </div>
+    </div>
+    <stl:include file="@/include/nav.html"></stl:include>
+    <stl:include file="@/include/footer.html"></stl:include>
+</body>
+
+</html>

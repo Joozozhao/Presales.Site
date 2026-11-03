@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <stl:include file="@/include/meta.html"></stl:include>
+</head>
+<body>
+    <stl:include file="@/include/header.html"></stl:include>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <stl:include file="@/include/loc.html"></stl:include>
+            <div class="uk-background-default uk-border-rounded uk-box-shadow-small">
+                <div class="uk-container">
+                    <article class="uk-article">
+                        <div class="uk-card uk-card-default"> 
+	<div class="uk-card-header"> 
+		<div class="uk-grid-small uk-flex-middle" uk-grid> 
+			<div class="uk-width-auto"> <img class="uk-avatar-small" width="40" height="40" src="{Stl.SiteUrl}/images/question.png" alt="{content.title}"> </div> 
+			<div class="uk-width-expand"> <h5 class="uk-card-title uk-margin-remove-bottom uk-text-large uk-text-bold"><stl:content type="Title"/></h5> </div> 
+		</div> 
+	</div> 
+	<div class="uk-card-body"> 
+		<div class="uk-grid-small uk-flex-middle" uk-grid> 
+			<div class="uk-width-auto"> <img class="uk-avatar-small" width="40" height="40" src="{Stl.SiteUrl}/images/answer.png" alt="{content.title}"> </div> 
+			<div class="uk-width-expand"> <p class="uk-text-meta uk-margin-remove-top" style="line-height:1.5"> <stl:content type="content" /> </p> </div> 
+		</div> 
+	</div>
+	</div>
+ </article>
+</div></div>
+<div class="uk-container">
+<div class="uk-margin-large-top paginate-post">
+                            <div class="uk-child-width-expand@s uk-grid-large" data-uk-grid>
+                                <div>
+                                    <h5>
+                                        <stl:navigation type="PreviousContent">
+                                            <stl:content type="title" wordnum="15"></stl:content>
+                                        </stl:navigation>
+                                    </h5>
+                                    <div>
+                                        <stl:navigation type="PreviousContent">
+                                            <stl:a class="uk-remove-underline hvr-back">&larr; 上一条</stl:a>
+                                        </stl:navigation>
+                                    </div>
+                                </div>
+                                <div class="uk-text-right">
+                                    <h5>
+                                        <stl:navigation type="NextContent">
+                                            <stl:content type="title" wordnum="15"></stl:content>
+                                        </stl:navigation>
+                                    </h5>
+                                    <div>
+                                        <stl:navigation type="NextContent">
+                                            <stl:a class="uk-remove-underline hvr-forward">下一条 &rarr;</stl:a>
+                                        </stl:navigation>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+         
+        </div>
+    </div>
+    <stl:include file="@/include/nav.html"></stl:include>
+    <stl:include file="@/include/footer.html"></stl:include>
+</body>
+
+</html>

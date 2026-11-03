@@ -1,0 +1,32 @@
+<div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar"> <a class="uk-logo" href="{stl.siteurl}">{stl.sitename}</a> <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+        <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-top uk-text-center">
+            <stl:if Type="channelName" Value="首页">
+                <stl:yes>
+                    <li class="uk-active">
+                        <stl:a channelName="首页"></stl:a>
+                    </li>
+                </stl:yes>
+                <stl:no>
+                    <li>
+                        <stl:a channelName="首页"></stl:a>
+                </stl:no>
+            </stl:if>
+            <stl:channels channelName="首页" groupChannel="主导航">
+                <stl:if Type="UpChannelOrSelf">
+                    <stl:yes>
+                        <li class="uk-active">
+                            <stl:a>{channel.title}</stl:a>
+                        </li>
+                    </stl:yes>
+                    <stl:no>
+                        <li>
+                            <stl:a>{channel.title}</stl:a>
+                        </li>
+                    </stl:no>
+                </stl:if>
+            </stl:channels>
+             
+        </ul>
+    </div>
+</div>

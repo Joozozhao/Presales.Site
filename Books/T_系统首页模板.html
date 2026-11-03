@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <stl:include file="@/include/book-meta.html"></stl:include>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <stl:include file="@/include/book-header.html"></stl:include>
+        <!-- Banner -->
+        <section id="banner" class="major">
+            <div class="inner">
+                <header class="major">
+                    <h1>Hi, 这里就有你要找的资料～</h1>
+                </header>
+                <div class="content">
+                    <p>这里的资料，你可以直接分享链接给你的客户，无需下载，即刻呈现～<br />
+                        从用户体验出发，给你更极致的体验，如果你有更好的建议，请随时与我们取得联系. by PS.Team
+                    </p>
+                    <ul class="actions">
+                        <li><a href="#one" class="button next scrolly">让我看看～</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Main -->
+        <div id="main">
+            <!-- One -->
+            <section id="one" class="tiles">
+                <stl:contents channelName="产品资料" order="addDateBack">
+                    <article>
+                        <span class="image">
+                            <img src="{Content.imageUrl}" alt="{content.title}" />
+                        </span>
+                        <header class="major">
+                            <h3>
+                                <stl:a target="_blank" class="link">
+                                    <stl:content type="title"></stl:content>
+                                </stl:a>
+                            </h3>
+                            <p>
+                                <stl:content type="subtitle"></stl:content>
+                            </p>
+                        </header>
+                    </article>
+                </stl:contents>
+                <stl:channels channelName="解决方案">
+                <article>
+                    <span class="image">
+                        <img src="{channel.imageUrl}" alt="{channel.title}" />
+                    </span>
+                    <header class="major">
+                        <h3><stl:a target="_blank" class="link"><stl:a></h3>
+                        <p>共发布了<stl:count type="contents"></stl:count>个行业解决方案，包括：<stl:contents><stl:content type="Title" leftText="【" rightText="】"></stl:content></stl:contents></p>
+                    </header>
+                </article>
+            </stl:channels>
+            </section>
+        </div>
+        <!-- Contact -->
+        <stl:include file="@/include/book-footer.html"></stl:include>
+    </div>
+</body>
+
+</html>

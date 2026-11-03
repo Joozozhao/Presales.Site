@@ -1,0 +1,283 @@
+.count_num {
+    display: inline-block;
+    background-color: #ccc;
+    color: #000;
+    font-size: 0.4em;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.uk-width-expand sup {
+    font-size: 0.5em;
+    color: red;
+}
+.jo-font-fff {
+    color: #fff !important;
+}
+
+.jo-color .uk-text-primary {
+    color: #003333 !important;
+}
+
+.jo-left {
+    text-align: left;
+}
+
+.jo-block span {
+    color: #09f;
+    display: inline-block;
+}
+
+.jo-gre {
+    color: #009966 !important;
+}
+
+.jo-red {
+    color: #CC0033 !important;
+}
+
+.jo-mar {
+    margin-top: 10px !important;
+}
+
+.jo-index .uk-accordion-content {
+    padding: 0 !important;
+    border: none !important;
+    background-color: none !important;
+}
+
+.uk-grid-index {
+    margin-left: 0 !important;
+}
+
+.uk-avatar {
+    width: 160px;
+}
+
+.jo-font {
+    font-size: 1.2em !important;
+}
+
+.jo-page .uk-button {
+    padding: 2px 7px !important;
+}
+
+.jo-padding8 {
+    padding-left: 8px !important;
+}
+
+.jo-contents {
+    text-indent: 2em;
+    line-height: 1.7em;
+}
+
+.jo-index .uk-card-body {
+    padding: 25px !important;
+}
+
+.jo-index .uk-card-badge {
+    bottom: 30px !important;
+    top: auto !important;
+}
+
+.jo-label {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+@media (min-width: 1200px) {
+    .jo-index .uk-card-body {
+        padding: 40px 40px;
+    }
+}
+
+.jo-bg-000 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px 20px;
+}
+
+.jo-flag {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 26px;
+    color: yellow;
+    background: url(../images/flag.svg) no-repeat;
+}
+.no-flag {
+    background: url(../images/starbucks.svg) no-repeat;
+}
+.jo-text-no {
+    text-decoration: none;
+    color: inherit;
+}
+.jo-text-no a:hover {
+    text-decoration: none;
+    color: yellow;
+}
+
+.tm-sidebar-left {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 240px !important;
+    padding: 40px 40px 60px 40px;
+    border-right: 1px #e5e5e5 solid;
+    overflow: auto
+}
+
+.tm-sidebar-right {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 0px);
+    width: 200px
+}
+
+@media (min-width:960px) {
+    .tm-sidebar-left+.tm-main {
+        padding-left: 240px
+    }
+}
+
+@media (min-width:1200px) {
+    .tm-sidebar-right {
+        left: calc(100% + 0px)
+    }
+
+    .tm-sidebar-left+.tm-main {
+        padding-left: 40px
+    }
+}
+
+@media (min-width:1400px) {
+    .tm-sidebar-left {
+        width: 300px !important;
+        padding: 45px 45px 60px 45px
+    }
+
+    .tm-sidebar-right {
+        left: calc(100% + 60px)
+    }
+
+    .tm-sidebar-left+.tm-main {
+        padding-left: 40px
+    }
+}
+
+.tm-nav>li.uk-active>a {
+    position: relative
+}
+
+.tm-nav>li.uk-active>a:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -25px;
+    width: 15px;
+    border-top: 1px solid #1e87f0
+}
+
+.tm-nav .uk-nav-header {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.uk-nav-default {
+    font-size: 14px
+}
+
+.uk-nav-default>li>a {
+    color: #999
+}
+
+.uk-nav-default>li>a:hover,
+.uk-nav-default>li>a:focus {
+    color: #666
+}
+
+.uk-nav-default>li.uk-active>a {
+    color: #222
+}
+
+.uk-nav-default .uk-nav-header {
+    color: #222
+}
+
+.uk-nav-default .uk-nav-divider {
+    border-top: 1px solid #e5e5e5
+}
+
+.uk-nav-default .uk-nav-sub a {
+    color: #999
+}
+
+.uk-nav-default .uk-nav-sub a:hover,
+.uk-nav-default .uk-nav-sub a:focus {
+    color: #666
+}
+
+.uk-nav-default .uk-nav-sub li.uk-active>a {
+    color: #222
+}
+
+.tm-heading-fragment a {
+    color: inherit;
+    text-decoration: none
+}
+
+.jo-a p {
+    color: inherit;
+    margin: 10px 0;
+    color: #999;
+
+}
+
+.jo-a p a {
+    color: #222;
+
+}
+
+.jo-a p a:hover,
+.jo-a p a:focus {
+    color: #699;
+    text-decoration: none;
+}
+@media (min-width:640px) {
+    h2.tm-heading-fragment>a:before {
+        content: "#";
+        position: absolute;
+        width: 25px;
+        margin-left: -25px;
+        color: #999
+    }
+}
+
+pre {
+    font: 14px / 1.5 'Roboto Mono', monospace;
+    color: #fff;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    overflow: auto;
+    padding: 15px;
+    border: 0 solid #e5e5e5;
+    border-radius: 3;
+    background: #669999;
+}
+.jo-le-co p {
+    text-indent: 2em;
+}
+.jo-le-co p .uk-label {
+    text-indent: 0em;
+}
+.jo-img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 8px 8px 0 0;
+}
+.years-text {text-align:center;}
+.years-box {box-shadow: 0 2px 8px rgba(88, 58, 188, 0.2); margin-bottom: 10px; padding: 5px 0;}
+.years-box.no {box-shadow:  none;  margin-bottom: 10px; padding: 5px 0;}

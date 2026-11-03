@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+<head>
+    <stl:include file="@/include/meta.html"></stl:include>
+</head>
+
+<body>
+    <stl:include file="@/include/header.html"></stl:include>
+    <div class="uk-section uk-section-muted">
+        <div class="uk-container">
+            <ul class="uk-breadcrumb uk-margin-medium-top-">
+                <li>
+                    <stl:a channelName="首页" />
+                </li>
+                <li><span>时间都去哪儿了？</span></li>
+            </ul>
+            <div>
+                <h1 class="uk-heading-line uk-text-center"><span>{stl.timestext}仅剩</span></h1>
+                <div class="uk-card uk-card-body uk-card-default uk-card-hover uk-inline uk-alert-danger uk-border-rounded" uk-alert> <a class="uk-alert-close" uk-close></a>
+                    <div class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: {stl.timesdate}">
+                        <div>
+                            <div class="uk-countdown-number uk-countdown-days"></div>
+                        </div>
+                        <div class="uk-countdown-separator">天</div>
+                        <div>
+                            <div class="uk-countdown-number uk-countdown-hours"></div>
+                        </div>
+                        <div class="uk-countdown-separator">时</div>
+                        <div>
+                            <div class="uk-countdown-number uk-countdown-minutes"></div>
+                        </div>
+                        <div class="uk-countdown-separator">'</div>
+                        <div>
+                            <div class="uk-countdown-number uk-countdown-seconds"></div>
+                        </div>
+                        <div class="uk-countdown-separator">"</div>
+                    </div>
+                </div>
+                <stl:contents channelName="时间机器">
+                    <h1 class="uk-heading-line uk-text-center"><span>{content.title}仅剩</span></h1>
+                    <div class="uk-card uk-card-body uk-card-default uk-card-hover uk-inline uk-alert-warning uk-border-rounded" uk-alert> <a class="uk-alert-close" uk-close></a>
+                        <div class="uk-grid-small uk-child-width-auto" uk-grid uk-countdown="date: {content.subtitle}">
+                            <div>
+                                <div class="uk-countdown-number uk-countdown-days"></div>
+                            </div>
+                            <div class="uk-countdown-separator jo-padding8">天</div>
+                            <div>
+                                <div class="uk-countdown-number uk-countdown-hours"></div>
+                            </div>
+                            <div class="uk-countdown-separator jo-padding8">时</div>
+                            <div>
+                                <div class="uk-countdown-number uk-countdown-minutes"></div>
+                            </div>
+                            <div class="uk-countdown-separator jo-padding8">'</div>
+                            <div>
+                                <div class="uk-countdown-number uk-countdown-seconds"></div>
+                            </div>
+                            <div class="uk-countdown-separator jo-padding8">"</div>
+                        </div>
+                    </div>
+                </stl:contents>
+            </div>
+        </div>
+    </div>
+    <stl:include file="@/include/nav.html"></stl:include>
+    <stl:include file="@/include/footer.html"></stl:include>
+</body>
+
+</html>
